@@ -3,7 +3,7 @@
 A performant and flexible linear algebra API.
 I made this because I wanted a way to do complex vector calculations without incurring the overhead of a new object for every operation, but with painless syntax.
 
-Even though the syntax is designed to feel like any other chainable function library, where a new object and context are instantiated and returned with each operation, it is not. Instead, the module exposes a singleton containing all the methods, all of which return the singleton to make it chainable, and all results are stored as simple arrays on a module-scoped stack, which is what makes it nestable.
+Coolgebra achieves performance by caching as much as possible. Even though the syntax is designed to feel like any other chainable function library, where a new object and context are instantiated and returned with each operation, it is not. Instead, the module exposes a singleton containing all the methods, all of which return the singleton to make it chainable, and all results are stored as simple arrays on a module-scoped stack, which is what makes it nestable.
 
 Coolgebra is a work in progress. It is written in ES6 and may need to be transpiled for browser environments.
 Require it in your build and assign it to the $ variable.
