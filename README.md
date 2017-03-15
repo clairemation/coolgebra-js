@@ -1,5 +1,8 @@
 # coolgebra-js
 
+Work in progress.
+coolgebra.js is written in ES6 and may need to be transpiled for browser environments.
+
 Vectors are represented by arrays.
 	[x,y,z,w]
   
