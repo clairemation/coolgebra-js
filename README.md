@@ -2,6 +2,7 @@
 
 A cool vector & matrix math API that allows chaining and nesting of operations.
 coolgebra.js is a work in progress. It is written in ES6 and may need to be transpiled for browser environments.
+Require it in your build and assign it to the $ variable.
 
 Vectors are represented by arrays.
 <br/>[x,y,z,w]
