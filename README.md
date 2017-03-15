@@ -1,6 +1,8 @@
 # coolgebra-js
 
 A cool vector & matrix math API that allows chaining and nesting of operations.
+I went to all this trouble because I am lazy and wanted a more natural and streamlined way to write linear algebra functions in my projects.
+
 coolgebra.js is a work in progress. It is written in ES6 and may need to be transpiled for browser environments.
 Require it in your build and assign it to the $ variable.
 
