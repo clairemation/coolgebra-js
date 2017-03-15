@@ -18,5 +18,5 @@ Chain as many operators as you want.
 You can nest operations:
 <br/>$([3,4]).plus ($([1,1]).times(3).$$) .$$
 
-(Spaces added for clarity, delete in actual code)
 as long as each nested sequence begins and ends with $() and .$$.
+(Spaces added for clarity, delete in actual code.)
