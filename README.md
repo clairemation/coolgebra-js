@@ -22,7 +22,7 @@ Chain as many operations as you want.
 <br/>==> [-0.9019371851463437, 0.4318672412331016]
 
 You can nest operations:
-<br/>$([3,4]).plus  **(**$([1,1]).times(3).$$**)**  directionTo([4,5]).rotate(Math.PI).$$
+<br/>$([3,4]).plus  **(**$([1,1]).times(3).$$**)**  .$$
 
 as long as each nested sequence begins and terminates with $() and .$$.
 (Spaces added for clarity, delete in actual code.)
