@@ -10,7 +10,7 @@ Vectors are represented by arrays.
 Wrap the first vector in your sequence with $().
 <br/>$([x,y,z])
 
-Chain as many operators as you want.
+Chain as many operations as you want.
 <br/>End the sequence with .$$
 <br/>$([1,1]).plus(3).times([4,5]).rotate(1,2).unit().$$
 <br/>==> [-0.9019371851463437, 0.4318672412331016]
@@ -20,3 +20,5 @@ You can nest operations:
 
 as long as each nested sequence begins and ends with $() and .$$.
 (Spaces added for clarity, delete in actual code.)
+
+List of operations coming soon.
