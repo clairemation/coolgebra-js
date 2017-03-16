@@ -18,7 +18,7 @@ Prepend the first argument in your sequence with $.
 
 Chain as many operations as you want.
 <br/>Terminate the sequence with .$.
-<br/>$([1,1]).plus(3).times([4,5]).rotate(1,2).unit().$
+<br/>$([1,1]).plus(3).times([4,5]).rotate(0.33).unit().$
 <br/>==> [-0.9019371851463437, 0.4318672412331016]
 
 You can nest operations:
