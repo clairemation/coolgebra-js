@@ -205,6 +205,13 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 `$([1,2]).rightNormal().$  
    // --> [0.8944271909999159, -0.4472135954999579]`
    
+**Angle (2d vectors only)**
+---
+
+- **angle2d:**
+
+
+   
 Yet to write up:  
 - angle
 - rotation
