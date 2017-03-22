@@ -7,8 +7,8 @@ The syntax is designed to feel as if you were using a library like Sylvester, bu
 Coolgebra is a work in progress. It is written in ES6 and may need to be transpiled for browser environments. Require it in your build and assign it to the $ variable (see below about using a different variable).
 
 Further optimizations could include:
--object pooling the arrays
--adding syntax to use only specialized methods for the given vector/matrix size
+- object pooling the arrays
+- adding syntax to use only specialized methods for the given vector/matrix size
 
 # API
 
@@ -32,3 +32,54 @@ as long as each nested sequence begins with the start tag and terminates with th
 Note: If $ is already assigned in your code, you can assign coolgebra.js (and thereby the prefix tag) to any variable you want. To change the end tag, edit the END_TAG constant in line 1 of coolgebra.js.
 
 # Operations
+
+Vectors can have from 2 to 4 elements. Matrices are only 4x4 (this was written for graphics programming).
+   
+$([1,2,3,4]).plus(1).$  
+   ==> [2,3,4,5]
+   
+$([1,2,3,4]).plus([4,3,2,1]).$  
+   ==> [5,5,5,5]
+   
+$([1,2,3,4]).plusScalar(1).$  
+   ==> [2,3,4,5]
+   *faster than generic 'plus'*   
+
+$([1,2,3,4]).plusVector([4,3,2,1]).$  
+   ==> [5,5,5,5]
+   *faster than generic 'plus'*
+   
+$([1,2,3,4]).minusVector([4,3,2,1]).$  
+   ==> [-3, -1, 1, 3]
+   *faster than generic 'plus' with negative numbers*
+   
+$([1,2,3,4]).times(2).$  
+   ==> [2, 4, 6, 8]
+   
+$([1,2,3,4]).times([1,2,3,4]).$  
+   ==> [1,4,9,16]
+   
+$([1,2,3,4]).timesScalar(2).$  
+   ==> [2,4,6,8]
+   *faster than generic 'times'*   
+   
+$([1,2,3,4]).timesVector([1,2,3,4]).$  
+   ==> [1,4,9,16]
+   *faster than generic 'times'*
+   
+following the same pattern:
+- divideBy
+- divideByScalar
+- divideByVector
+
+Mix/interpolate/weighted average
+$(a).mix(b, t).$
+The argument t is optional and specifies the degree of mixing.  
+0 = completely a, 1 = completely b
+If left out, t defaults to 0.5 (a 50%/50% mix)
+$([1,2,3,4]).mix([4,3,2,1], 0.25).$  
+   ==> [1.75, 2.25, 2.75, 3.25]
+
+
+$([1,2,3,4]).dot([4,3,2,1]).$   
+   ==> 20
