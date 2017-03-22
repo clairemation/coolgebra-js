@@ -38,7 +38,7 @@ Vectors can have from 2 to 4 elements. Matrices are only 4x4.
 **Addition**
 ---
 
-**plus:**
+- **plus:**
 
 **$([a1, a2, a3, a4]).plus(b).$  
 $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
@@ -49,7 +49,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 `$([1,2,3,4]).plus([4,3,2,1]).$  
    // --> [5,5,5,5]`
 
-**plusScalar:**  
+- **plusScalar:**  
 *faster than generic 'plus'*
 
 **$([a1, a2, a3, a4]).plusScalar(b).$**
@@ -57,7 +57,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 `$([1,2,3,4]).plusScalar(1).$  
    // --> [2,3,4,5]  `
 
-**plusVector:**  
+- **plusVector:**  
    *faster than generic 'plus'*
 
 **$([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
@@ -68,7 +68,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 **Subtraction:**
 ---
 
-**minusVector:**
+- **minusVector:**
 
 **$([a1, a2, a3, a4]).minusVector([b1, b2, b3, b4]).$**
 
@@ -78,7 +78,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 **Multiplication:**
 ---
 
-**times:**
+- **times:**
 
 **$([a1, a2, a3, a4]).plus(b)  
 $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
@@ -89,7 +89,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 `$([1,2,3,4]).times([1,2,3,4]).$  
    // --> [1,4,9,16]`
    
-**timesScalar**  
+- **timesScalar**  
 *faster than genertic 'times'*
    
 **$([a1, a2, a3, a4]).timesScalar(b).$**
@@ -97,7 +97,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 `$([1,2,3,4]).timesScalar(2).$  
    // --> [2,4,6,8]  `
  
-**timesVector:**  
+- **timesVector:**  
    *faster than generic 'times'*
 
 **$([a1, a2, a3, a4]).times([b1, b2, b3, b4]).$** 
@@ -117,7 +117,7 @@ following the same pattern:
 ---
 *good for blending colors represented as [r,g,b] or [r,g,b,a]*
 
-**mix:**
+- **mix:**
 
 **$(a).mix(b, t).$**  
 
@@ -132,7 +132,7 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 **Dot product:**
 ---
 
-**dot:**
+- **dot:**
 
 **$([a1, a2, a3, a4]).dot([b1, b2, b3, b4]).$**
 
@@ -142,14 +142,14 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 **Length**
 ---
 
-**length:**
+- **length:**
 
 **$([a1, a2, a3, a4]).length().$**
 
 `$([1,2,3,4]).length().$  
    // --> 5.477225575051661`
    
-**squared length:**  
+- **squared length:**  
 *faster than 'length', use if you only need it for comparision*
 
 **$([a1, a2, a3, a4]).squaredLength().$**   
@@ -160,14 +160,14 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 **Distance:**
 ---
    
-**distance:**
+- **distance:**
 
 **$([a1, a2, a3, a4]).distance().$**
 
 `$([1,2,3,4]).distance([4,3,2,1], 0.25).$  
    // --> 4.47213595499958`
    
-**squared distance:**  
+- **squared distance:**  
 *faster than 'distance', use if you only need it for comparision*
 
 **$([a1, a2, a3, a4]).squaredDistance().$**
@@ -178,7 +178,7 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 **Unit vector:**
 ---
 
-**unit:**
+- **unit:**
 
 **$([a1, a2, a3, a4])>unit().$**
    
@@ -188,16 +188,19 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 **Normals (2d vectors only):**
 ---
 
-**leftNormal:**
+- **leftNormal:**  
+*a.k.a. rotate 90 deg left*
+
 
 **$([a1, a2]).leftNormal().$**
-*a.k.a. rotate 90 deg left*
 
 `$([1,2]).leftNormal().$  
    // --> [-0.8944271909999159, 0.4472135954999579]`
    
+- **rightNormal**  
+*a.k.a. rotate 90 deg left*
+   
 **$([a1, a2]).rightNormal().$**
-*a.k.a. rotate 90 deg right*
 
 `$([1,2]).rightNormal().$  
    // --> [0.8944271909999159, -0.4472135954999579]`
