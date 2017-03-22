@@ -1,4 +1,4 @@
-const TERMINATOR = '$';
+const END_TAG = '$';
 
 const Stack = require('./stack'),
   {sin, cos} = Math,
@@ -14,9 +14,7 @@ var $ = function(v){
   return vectorInstance;
 };
 
-// Chain terminators, use any one ----
-
-Object.defineProperty(Vector.prototype, TERMINATOR, {
+Object.defineProperty(Vector.prototype, END_TAG, {
   get: function(){
     return values.pop();
   }
@@ -221,34 +219,34 @@ Vector.prototype.dot = function(v){
 
 Vector.prototype.mix = function(v, t = 0.5){
   values.push(
-    this.timesScalar(1-t).plusVector($(v).timesScalar(t).$).$
+    this.timesScalar(1-t).plusVector($(v).timesScalar(t)[END_TAG])[END_TAG]
   );
   return this;
 }
 
 Vector.prototype.squaredLength = function() {
-  values.push(this.dot(values.peek()).$);
+  values.push(this.dot(values.peek())[END_TAG]);
   return this;
 }
 
 Vector.prototype.length = function(){
-  values.push(Math.sqrt(this.squaredLength().$));
+  values.push(Math.sqrt(this.squaredLength()[END_TAG]));
   return this;
 }
 
 Vector.prototype.squaredDistance = function(v){
-  values.push(this.minusVector(v).squaredLength().$);
+  values.push(this.minusVector(v).squaredLength()[END_TAG]);
   return this;
 }
 
 Vector.prototype.distance = function(v){
-  values.push(Math.sqrt(this.squaredDistance(v).$));
+  values.push(Math.sqrt(this.squaredDistance(v)[END_TAG]));
   return this;
 }
 
 Vector.prototype.unit = function(){
   values.push(
-    this.divideByScalar($(values.peek()).vectorLength().$).$
+    this.divideByScalar($(values.peek()).vectorLength()[END_TAG])[END_TAG]
   );
   return this;
 }
@@ -290,12 +288,12 @@ Vector.prototype.angle2d = function(){
 Vector.prototype.directionTo = function(v){
   var u = values.pop();
   values.push(v);
-  values.push(this.minusVector(u).unit().$);
+  values.push(this.minusVector(u).unit()[END_TAG]);
   return this;
 }
 
 Vector.prototype.projectedLength = function(v){
-  values.push(this.dot(v).$);
+  values.push(this.dot(v)[END_TAG]);
   return this;
 }
 
@@ -317,13 +315,13 @@ Vector.prototype.scale = function(x,y,z){
     0, y, 0, 0,
     0, 0, z, 0,
     0, 0, 0, 1
-  ]).$);
+  ])[END_TAG]);
   return this;
 };
 
 Vector.prototype.rotate = function(x,y,z){
   if (size === 2){
-    values.push(this.rotate2d(x).$);
+    values.push(this.rotate2d(x)[END_TAG]);
     return this;
   }
   var xRotation = [
@@ -345,7 +343,7 @@ Vector.prototype.rotate = function(x,y,z){
       0, 0, 0, 1
     ];
 
-  values.push(this.times(xRotation).times(yRotation).times(zRotation).$);
+  values.push(this.times(xRotation).times(yRotation).times(zRotation)[END_TAG]);
   return this;
 }
 
