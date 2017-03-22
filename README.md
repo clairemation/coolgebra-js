@@ -33,44 +33,74 @@ Note: If $ is already assigned in your code, you can assign coolgebra.js (and th
 
 # Operations
 
-Vectors can have from 2 to 4 elements. Matrices are only 4x4 (this was written for graphics programming).
+Vectors can have from 2 to 4 elements. Matrices are only 4x4.
 
-**Addition:**
+**ADDITION**
 
-$([1,2,3,4]).plus(1).$  
-   ==> [2,3,4,5]
+**plus:**
+
+**$([a1, a2, a3, a4]).plus(b)  
+$([a1, a2, a3, a4]).plus([b1, b2, b3, b4])**
+
+`$([1,2,3,4]).plus(1).$  
+   ==> [2,3,4,5]`
    
-$([1,2,3,4]).plus([4,3,2,1]).$  
-   ==> [5,5,5,5]
-   
-$([1,2,3,4]).plusScalar(1).$  
-   ==> [2,3,4,5]  
-   *faster than generic 'plus'*   
+`$([1,2,3,4]).plus([4,3,2,1]).$  
+   ==> [5,5,5,5]`
 
-$([1,2,3,4]).plusVector([4,3,2,1]).$  
-   ==> [5,5,5,5]  
+**plusScalar:**  
+*faster than generic 'plus'*
+
+**$([a1, a2, a3, a4]).plusScalar(b)**
+
+`$([1,2,3,4]).plusScalar(1).$  
+   ==> [2,3,4,5]  `
+
+**plusVector:**  
    *faster than generic 'plus'*
-   
-**Subtraction:**
 
-$([1,2,3,4]).minusVector([4,3,2,1]).$  
-   ==> [-3, -1, 1, 3]
+**$([a1, a2, a3, a4]).plus([b1, b2, b3, b4])**
+   
+`$([1,2,3,4]).plusVector([4,3,2,1]).$  
+   ==> [5,5,5,5] ` 
+   
+**SUBTRACTION:**
 
-**Multiplication:**
+**minusVector:**
 
-$([1,2,3,4]).times(2).$  
-   ==> [2, 4, 6, 8]
+**$([a1, a2, a3, a4]).minusVector([b1, b2, b3, b4])**
+
+`$([1,2,3,4]).minusVector([4,3,2,1]).$  
+   ==> [-3, -1, 1, 3]`
+
+**MULTIPLICATION:**
+
+**times:**
+
+**$([a1, a2, a3, a4]).plus(b)  
+$([a1, a2, a3, a4]).plus([b1, b2, b3, b4])**
+
+`$([1,2,3,4]).times(2).$  
+   ==> [2, 4, 6, 8]`
    
-$([1,2,3,4]).times([1,2,3,4]).$  
-   ==> [1,4,9,16]
+`$([1,2,3,4]).times([1,2,3,4]).$  
+   ==> [1,4,9,16]`
    
-$([1,2,3,4]).timesScalar(2).$  
-   ==> [2,4,6,8]  
-   *faster than generic 'times'*   
+**timesScalar**  
+*faster than genertic 'times'*
    
-$([1,2,3,4]).timesVector([1,2,3,4]).$  
-   ==> [1,4,9,16]  
+**$([a1, a2, a3, a4]).timesScalar(b)**
+
+`$([1,2,3,4]).timesScalar(2).$  
+   ==> [2,4,6,8]  `
+ 
+**timesVector:**  
    *faster than generic 'times'*
+
+**$([a1, a2, a3, a4]).times([b1, b2, b3, b4])** 
+ 
+`$([1,2,3,4]).timesVector([1,2,3,4]).$  
+   ==> [1,4,9,16]  `
    
 **Division:**
 
