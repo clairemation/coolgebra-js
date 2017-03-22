@@ -44,11 +44,11 @@ $([1,2,3,4]).plus([4,3,2,1]).$
    ==> [5,5,5,5]
    
 $([1,2,3,4]).plusScalar(1).$  
-   ==> [2,3,4,5]
+   ==> [2,3,4,5]  
    *faster than generic 'plus'*   
 
 $([1,2,3,4]).plusVector([4,3,2,1]).$  
-   ==> [5,5,5,5]
+   ==> [5,5,5,5]  
    *faster than generic 'plus'*
    
 **Subtraction:**
@@ -65,11 +65,11 @@ $([1,2,3,4]).times([1,2,3,4]).$
    ==> [1,4,9,16]
    
 $([1,2,3,4]).timesScalar(2).$  
-   ==> [2,4,6,8]
+   ==> [2,4,6,8]  
    *faster than generic 'times'*   
    
 $([1,2,3,4]).timesVector([1,2,3,4]).$  
-   ==> [1,4,9,16]
+   ==> [1,4,9,16]  
    *faster than generic 'times'*
    
 **Division:**
@@ -80,6 +80,7 @@ following the same pattern:
 - divideByVector
 
 **Mix / blend / interpolate / weighted average:**  
+*good for blending colors represented as [r,g,b] or [r,g,b,a]*
 
 $(a).mix(b, t).$  
 The argument t is optional and specifies the degree of mixing.  
@@ -93,7 +94,7 @@ $([1,2,3,4]).mix([4,3,2,1], 0.25).$
 $([1,2,3,4]).dot([4,3,2,1]).$   
    ==> 20
 
-**Length: **
+**Length:**
 
 $([1,2,3,4]).length().$  
    ==>5.477225575051661
