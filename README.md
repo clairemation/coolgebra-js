@@ -44,10 +44,10 @@ Vectors can have from 2 to 4 elements. Matrices are only 4x4.
 $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 
 `$([1,2,3,4]).plus(1).$  
-   ==> [2,3,4,5]`
+   // --> [2,3,4,5]`
    
 `$([1,2,3,4]).plus([4,3,2,1]).$  
-   ==> [5,5,5,5]`
+   // --> [5,5,5,5]`
 
 **plusScalar:**  
 *faster than generic 'plus'*
@@ -55,7 +55,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 **$([a1, a2, a3, a4]).plusScalar(b).$**
 
 `$([1,2,3,4]).plusScalar(1).$  
-   ==> [2,3,4,5]  `
+   // --> [2,3,4,5]  `
 
 **plusVector:**  
    *faster than generic 'plus'*
@@ -63,7 +63,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 **$([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
    
 `$([1,2,3,4]).plusVector([4,3,2,1]).$  
-   ==> [5,5,5,5] ` 
+   // --> [5,5,5,5] ` 
    
 **Subtraction:**
 ---
@@ -73,7 +73,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 **$([a1, a2, a3, a4]).minusVector([b1, b2, b3, b4]).$**
 
 `$([1,2,3,4]).minusVector([4,3,2,1]).$  
-   ==> [-3, -1, 1, 3]`
+   // --> [-3, -1, 1, 3]`
 
 **Multiplication:**
 ---
@@ -84,10 +84,10 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 
 `$([1,2,3,4]).times(2).$  
-   ==> [2, 4, 6, 8]`
+   // --> [2, 4, 6, 8]`
    
 `$([1,2,3,4]).times([1,2,3,4]).$  
-   ==> [1,4,9,16]`
+   // --> [1,4,9,16]`
    
 **timesScalar**  
 *faster than genertic 'times'*
@@ -95,7 +95,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 **$([a1, a2, a3, a4]).timesScalar(b).$**
 
 `$([1,2,3,4]).timesScalar(2).$  
-   ==> [2,4,6,8]  `
+   // --> [2,4,6,8]  `
  
 **timesVector:**  
    *faster than generic 'times'*
@@ -103,7 +103,7 @@ $([a1, a2, a3, a4]).plus([b1, b2, b3, b4]).$**
 **$([a1, a2, a3, a4]).times([b1, b2, b3, b4]).$** 
  
 `$([1,2,3,4]).timesVector([1,2,3,4]).$  
-   ==> [1,4,9,16]  `
+   // --> [1,4,9,16]  `
    
 **Division:**
 ---
@@ -127,7 +127,7 @@ The argument t is optional and specifies the degree of mixing.
 If left out, t defaults to 0.5 (a 50%/50% mix)  
 
 `$([1,2,3,4]).mix([4,3,2,1], 0.25).$  
-   ==> [1.75, 2.25, 2.75, 3.25]`
+   // --> [1.75, 2.25, 2.75, 3.25]`
 
 **Dot product:**
 ---
@@ -137,7 +137,7 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 **$([a1, a2, a3, a4]).dot([b1, b2, b3, b4]).$**
 
 `$([1,2,3,4]).dot([4,3,2,1]).$   
-   ==> 20`
+   // --> 20`
 
 **Length**
 ---
@@ -147,7 +147,7 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 **$([a1, a2, a3, a4]).length().$**
 
 `$([1,2,3,4]).length().$  
-   ==>5.477225575051661`
+   // --> 5.477225575051661`
    
 **squared length:**  
 *faster than 'length', use if you only need it for comparision*
@@ -155,7 +155,7 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 **$([a1, a2, a3, a4]).squaredLength().$**   
    
 `$([1,2,3,4]).squaredLength().$  
-   ==> 30  `
+   // --> 30  `
    
 **Distance:**
 ---
@@ -165,7 +165,7 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 **$([a1, a2, a3, a4]).distance().$**
 
 `$([1,2,3,4]).distance([4,3,2,1], 0.25).$  
-   ==> 4.47213595499958`
+   // --> 4.47213595499958`
    
 **squared distance:**  
 *faster than 'distance', use if you only need it for comparision*
@@ -173,20 +173,34 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
 **$([a1, a2, a3, a4]).squaredDistance().$**
 
 `$([1,2,3,4]).squaredDistance([4,3,2,1], 0.25).$  
-   ==> 20  `
+   // --> 20  `
    
 **Unit vector:**
+---
+
+**unit:**
+
+**$([a1, a2, a3, a4])>unit().$**
    
-$([1,2,3,4]).unit().$  
-   ==> [0.18257418583505536, 0.3651483716701107, 0.5477225575051661, 0.7302967433402214]
+`$([1,2,3,4]).unit().$  
+   // --> [0.18257418583505536, 0.3651483716701107, 0.5477225575051661, 0.7302967433402214]`
 
 **Normals (2d vectors only):**
+---
 
-$([1,2]).leftNormal().$  
-   ==> [-0.8944271909999159, 0.4472135954999579]
+**leftNormal:**
+
+**$([a1, a2]).leftNormal().$**
+*a.k.a. rotate 90 deg left*
+
+`$([1,2]).leftNormal().$  
+   // --> [-0.8944271909999159, 0.4472135954999579]`
    
-$([1,2]).rightNormal().$  
-   ==> [0.8944271909999159, -0.4472135954999579]
+**$([a1, a2]).rightNormal().$**
+*a.k.a. rotate 90 deg right*
+
+`$([1,2]).rightNormal().$  
+   // --> [0.8944271909999159, -0.4472135954999579]`
    
 Yet to write up:  
 - angle
