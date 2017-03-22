@@ -1,6 +1,6 @@
 # coolgebra-js
 
-A performant and expressive library for complex vector and matrix calculations. I wrote Coolgebra because I wanted to be able to chain vector/matrix operations, but without incurring the overhead of creating a whole new object with every operation.
+A performant and expressive library for client-end complex vector and matrix calculations. I wrote Coolgebra because I wanted to be able to chain vector/matrix operations, but without incurring the overhead of creating a whole new object with every operation.
 
 The syntax is designed to feel as if you were using a library like Sylvester, but it is leaner behind the scenes. All results are stored in a single module-scoped stack, and the module exposes a singleton containing all the methods, which all return itself.
 
