@@ -23,7 +23,7 @@ Object.defineProperty(Vector.prototype, END_TAG, {
 // Functions
 
 Vector.prototype.plus = function(x){
-  if (x.length > 1){
+  if (Array.isArray(x)){
     return this.plusVector(x);
   } else {
     return this.plusScalar(x);
@@ -246,7 +246,7 @@ Vector.prototype.distance = function(v){
 
 Vector.prototype.unit = function(){
   values.push(
-    this.divideByScalar($(values.peek()).vectorLength()[END_TAG])[END_TAG]
+    this.divideByScalar($(values.peek()).length()[END_TAG])[END_TAG]
   );
   return this;
 }
@@ -347,7 +347,7 @@ Vector.prototype.rotate = function(x,y,z){
   return this;
 }
 
-Vector.prototype.matrixInverse = function(){
+Vector.prototype.inverse = function(){
   var r = Vector.IDENTITY_MATRIX,
     m = values.pop();
 
