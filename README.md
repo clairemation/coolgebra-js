@@ -17,7 +17,7 @@ Further optimizations could include:
 Vector/matrix parameters are represented by arrays.
 <br/>([x,y,z,w])
   
-Prepend the first argument in your sequence with the start tag $ (actually, whatever variable you have assigned Coolgebra to).
+Prepend the first argument in your sequence with the start tag $ (or, if you've assigned Coolgebra to a different value, that).
 <br/>$([x,y,z])
 
 Chain as many operations as you want.
