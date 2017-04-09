@@ -1,4 +1,4 @@
-4/9/2017: Fixed some bugs, added features including cross product, scalar projection, rotation to a plane normal, and determining which side of a given line segment a (point) vector is on.
+4/9/2017: Fixed some bugs, added features including cross product, scalar projection, rotation to a plane as specified by its normal vector, and determining which side of a given line segment a (point) vector is on.
 
 # coolgebra-js
 
