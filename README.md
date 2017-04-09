@@ -1,10 +1,10 @@
-4/9/2017: Fixed some bugs, added features including cross product, scalar projection, rotation to a plane as specified by its normal vector, and determining which side of a given line segment a (point) vector is on.
+4/9/2017: Fixed some bugs, added features including cross product, angle between two vectors, scalar projection, rotation to a plane as specified by its normal vector, and determining which side of a given line segment a (point) vector is on.
 
 # coolgebra-js
 
-A performant and expressive library for client-end complex vector and matrix calculations. I wrote Coolgebra because I wanted to be able to chain vector/matrix operations, but without incurring the overhead of creating a whole new object with every operation.
+A performant and expressive library for client-end complex vector and matrix calculations. I wrote Coolgebra because I wanted an easy-to-use syntax for chaining and nesting operations, but without incurring the overhead of creating a whole new object with every intermediate step.
 
-The syntax is designed to feel as if you were using a library like Sylvester, but it is leaner behind the scenes. All results are stored in a single module-scoped stack, and the module exposes a singleton containing all the methods, which all return itself.
+The syntax is designed to feel as if you were using a library like Sylvester, but behind the scenes, all results are stored as plain arrays in a single module-scoped stack. The module exposes a singleton containing all the methods, which all return itself.
 
 Coolgebra is a work in progress. It is written in ES6 and may need to be transpiled for browser environments. Require it in your build and assign it to the $ variable (see below about using a different variable).
 
@@ -210,9 +210,14 @@ If left out, t defaults to 0.5 (a 50%/50% mix)
    
 Yet to write up:  
 - angle
+- angle between
 - rotation
 - scale
+- cross product
 - direction to
 - projected length
 - transpose
 - inverse
+- rotate to plane
+- scalar projection
+- is left of line segment
