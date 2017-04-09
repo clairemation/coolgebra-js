@@ -10,7 +10,7 @@ Coolgebra is a work in progress. It is written in ES6 and may need to be transpi
 
 Further optimizations could include:
 - object pooling the arrays
-- adding syntax to use only specialized methods for the given vector/matrix size
+- exposing more methods specific to the input type
 
 # API
 
