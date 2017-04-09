@@ -1,3 +1,5 @@
+4/9/2017: Fixed some bugs, added features including cross product, scalar projection, rotation to a plane normal, and determining which side of a given line segment a (point) vector is on.
+
 # coolgebra-js
 
 A performant and expressive library for client-end complex vector and matrix calculations. I wrote Coolgebra because I wanted to be able to chain vector/matrix operations, but without incurring the overhead of creating a whole new object with every operation.
